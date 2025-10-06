@@ -185,25 +185,24 @@
                 <label for="genero" class="text-start">Genero</label>
                 
                 <div class="col-12 col-md-4 p-2 border rounded">
-                    <input type="radio" name="genero" id="hombre" value="hombre" required onclick="personalizado()">
+                    <input type="radio" name="genero" id="hombre" value="hombre" required onclick="document.getElementById('personalizado').style.display='none'">
                     <label class="form-check-label">Hombre</label>
                 </div>
 
                 <div class="col-12 col-md-4 p-2 border rounded">
-                    <input type="radio" name="genero" id="mujer" value="mujer" required onclick="personalizado()">
+                    <input type="radio" name="genero" id="mujer" value="mujer" required onclick="document.getElementById('personalizado').style.display='none'">
                     <label class="form-check-label">Mujer</label>
                 </div>
 
                 <div class="col-12 col-md-4 p-2 border rounded">
-                    <input type="radio" name="genero" id="otro" value="otro" required onclick="personalizado()">
+                    <input type="radio" name="genero" id="otro" value="otro" required onclick="document.getElementById('personalizado').style.display='block'">
                     <label class="form-check-label">Personalizado</label>
                 </div>
 
-                
             </div>
 
             <div class="mb-3" id="personalizado" style="display: none;">
-                    <input list="otros" name="genero" class="form-control" placeholder="Personalizado">
+                        <input list="otros" name="genero" class="form-control" placeholder="Personalizado">
                         <datalist id="otros" class="border rounded">
                             <option value="Femenino: Saludala por su cumpleaños">
                             <option value="Masculino: Saludalo por su cumpleaños">
@@ -212,18 +211,6 @@
                         <label for="personalizado" class="form-label">Tu pronombre sera vicible para todos</label>
                         <input type="text" name="genero" class="form-control" placeholder="Genero (opcional)">
             </div>
-
-            <script>
-                function personalizado() {
-                    var otro = document.getElementById("otro");
-                    var personalizado = document.getElementById("personalizado");
-                    if (otro.checked) {
-                        personalizado.style.display = "block";
-                    } else {
-                        personalizado.style.display = "none";
-                    }
-                }
-            </script>
 
             <div class="mb-3">
                 <input type="text" name="telocorreo" id="contacto" class="form-control" placeholder="Numero de telefono o Correo electronico">
@@ -248,13 +235,11 @@
         </div>
     </div>
 
-    <div>
-    
-</div>
             <div class="text-center" style="background-color: azure;">
         <p>Pagina elaborada por: Jesus Antonio Sagarnaga Macias</p>
         <p>Grupo: 5-D</p>
     </div>
+</div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
